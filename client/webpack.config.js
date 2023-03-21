@@ -25,7 +25,9 @@ module.exports = () => {
         title: 'TODOs List'
       }),
 
-      new WorkboxPlugin.GenerateSW(),
+      new WorkboxPlugin.GenerateSW({
+        mode: 'production'
+      }),
       new MiniCssExtractPlugin(),
       new WebpackPwaManifest({
         name: 'My PWA',
